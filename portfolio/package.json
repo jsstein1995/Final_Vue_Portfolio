@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "flickity": "^2.2.1",
+    "jquery": "^3.5.1",
     "locomotive-scroll": "^3.4.4",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-flickity": "^1.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
