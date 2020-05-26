@@ -4,7 +4,9 @@
       <div class="rocks-container">
           <img class="rocks-image" src="../assets/img/front-rocks.png" alt="top_image">
       </div>
-      <div class="top-color-1"></div>
+      <section data-scroll-section>
+        <div class="top-color-1" data-scroll data-scroll-speed=".05"></div>
+      </section>
 
       <div class="job-title-container">
                 <div v-if='topTextDisplay' class="line1 sliding">
@@ -63,7 +65,7 @@
     </section>
     <section class='career-section-container' data-scroll-section>
       <span class="big-text">
-          <div class="career-section-title-small">Career History</div>
+          <div class="career-section-title-small" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">Career History</div>
       </span>
       <div class="position">
         <div class="position-years">
@@ -249,7 +251,8 @@ export default {
         el: _self.$refs['scrollSections'],
         smooth: true,
         smoothMobile: true,
-        getDirection: true
+        getDirection: true,
+        initClass: true
       });
     },
     splitBio: function () {
@@ -280,7 +283,7 @@ export default {
           }
           function fadeInElement(elem, time) {      //Fade-in function that takes the element to fade-in, and the time it should wait
               setTimeout(function() {
-                  elem.style.opacity = 1           //Set our element's opacity to 1
+                  elem.css('opacity', 1);
               }, 1650 * time + 500);                        //Set the time it should wait
           }
       },
@@ -295,27 +298,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-section {
-  min-height: 600px;
-  border-bottom: 1px solid #38495C;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  display: block;
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
   color: #42b983;
+}
+.big-text{
+  margin-right: -40rem;
 }
 </style>

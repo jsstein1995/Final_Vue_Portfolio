@@ -219,11 +219,6 @@ section.long-bio > p {
     letter-spacing: .8rem;
     line-height: 9rem;
 }
-section {
-    padding: 4rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-}
 .port {
     font-size: 8rem;
     /* letter-spacing: 3rem; */
